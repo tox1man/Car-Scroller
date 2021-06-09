@@ -12,7 +12,7 @@ namespace Utility
             get => _value;
             set
             {
-                _value = Value;
+                _value = value;
                 _onChangeValue?.Invoke(_value);
             }
         }

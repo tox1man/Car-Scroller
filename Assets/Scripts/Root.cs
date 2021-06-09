@@ -5,7 +5,6 @@ public class Root : MonoBehaviour
 {
     [SerializeField]
     private Transform _UIPosition;
-
     private MainController _mainController;
 
     private void Awake()

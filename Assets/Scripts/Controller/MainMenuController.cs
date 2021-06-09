@@ -1,19 +1,17 @@
 ﻿using Profile;
 using UnityEngine;
 using Utility;
-
-namespace UI
-{
     internal class MainMenuController : BaseController
     {
         private readonly PlayerProfile _playerProfile;
         private MainMenuView _view;
-        private readonly ResourcePath _viewPath = new ResourcePath { Path = "Prefabs/mainMenu" };
+        private readonly ResourcePath _viewPath = new ResourcePath { Path = "Prefabs/MainMenu" };
 
         public MainMenuController(Transform UIPosition, PlayerProfile playerProfile)
         {
             _playerProfile = playerProfile;
             _view = LoadView(UIPosition);
+            _view.Init(StartGame);
         }
 
         private MainMenuView LoadView(Transform UIPosition)
@@ -28,4 +26,3 @@ namespace UI
             _playerProfile.CurrentState.Value = GameState.Game;
         }
     }
-}

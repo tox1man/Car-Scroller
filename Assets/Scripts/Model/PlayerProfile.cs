@@ -2,9 +2,9 @@
 
 namespace Profile
 {
-    public class PlayerProfile
+    internal class PlayerProfile
     {
-        public PlayerProfile(float carSpeed)
+        internal PlayerProfile(float carSpeed)
         {
             CurrentState = new SubscriptionProperty<GameState>();
             CurrentCar = new Car(carSpeed);
